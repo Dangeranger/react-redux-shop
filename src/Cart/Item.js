@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import styles from "./Item.module.scss";
 
-import { removeFromCart } from "../actions";
+import { removeFromCart } from "../actions/cart";
 import formatPrice from "../Products/formatPrice";
 
 class Item extends React.Component {

@@ -3,7 +3,7 @@ import { Router, Link } from "@reach/router";
 
 import { Provider } from "react-redux";
 import store from "./store";
-import { fetchProducts } from "./actions";
+import { fetchProducts } from "./actions/products";
 
 import "./App.scss";
 

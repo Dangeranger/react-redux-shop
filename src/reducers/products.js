@@ -1,14 +1,16 @@
+import * as actions from "../actions/products";
+
 export default (state = { loading: false, products: [] }, action) => {
   let newState = {};
 
   switch (action.type) {
-    case "FETCH_PRODUCTS_STARTED":
+    case actions.FETCH_PRODUCTS_STARTED:
       newState = {
         ...state,
         loading: true
       };
       break;
-    case "PRODUCTS_FETCHED":
+    case actions.PRODUCTS_FETCHED:
       newState = {
         ...state,
         loading: false,

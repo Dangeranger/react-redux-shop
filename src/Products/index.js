@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Product from "./Product";
-import { fetchProducts } from "../actions";
+import { fetchProducts } from "../actions/products";
 
 import styles from "./index.module.scss";
 
