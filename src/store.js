@@ -1,4 +1,5 @@
 import { createStore } from "redux";
+import * as actions from "./actions";
 
 const products = [
   {
@@ -43,12 +44,12 @@ const reducer = (state = initialState, action) => {
   console.log("Original state", state);
 
   switch (action.type) {
-    case "ADD_TO_CART":
+    case actions.ADD_TO_CART:
       const product = state.products.find(product => product.id === action.id);
 
       newState = { ...state, cart: state.cart.concat(product) };
       break;
-    case "REMOVE_FROM_CART":
+    case actions.REMOVE_FROM_CART:
       const newCart = state.cart.filter(product => product.id !== action.id);
 
       newState = { ...state, cart: newCart };
