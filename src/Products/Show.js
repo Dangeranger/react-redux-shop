@@ -38,6 +38,10 @@ class Show extends React.Component {
   }
 
   render() {
+    if (this.props.loading) {
+      return <div>Loading...</div>;
+    }
+
     const { picture, id, price } = this.props;
     return (
       <div>
@@ -54,13 +58,22 @@ class Show extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  const product = state.products.find(
+  const {
+    products: { loading, products },
+    cart
+  } = state;
+
+  if (loading) {
+    return { loading: true };
+  }
+
+  const product = products.find(
     product => product.id.toString() === ownProps.id
   );
 
-  const inCart = state.cart.includes(product);
+  const inCart = cart.includes(product.id);
 
-  return { ...product, inCart: inCart };
+  return { ...product, loading: false, inCart: inCart };
 };
 
 const mapDispatchToProps = dispatch => {

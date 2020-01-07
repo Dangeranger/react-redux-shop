@@ -3,6 +3,7 @@ import { Router, Link } from "@reach/router";
 
 import { Provider } from "react-redux";
 import store from "./store";
+import { fetchProducts } from "./actions";
 
 import "./App.scss";
 
@@ -11,6 +12,8 @@ import Product from "./Products/Show";
 import Cart from "./Cart";
 
 import CartMenuIcon from "./Cart/MenuIcon";
+
+store.dispatch(fetchProducts());
 
 class App extends React.Component {
   render() {

@@ -7,7 +7,7 @@ import Item from "./Item";
 class Cart extends React.Component {
   renderItems() {
     if (this.props.items.length > 0) {
-      return this.props.items.map(item => <Item {...item} />);
+      return this.props.items.map(item => <Item key={item.id} {...item} />);
     }
 
     return (
@@ -28,8 +28,12 @@ class Cart extends React.Component {
 }
 
 const mapStateToProps = state => {
+  const {
+    products: { products },
+    cart
+  } = state;
   return {
-    items: state.cart
+    items: products.filter(product => cart.includes(product.id))
   };
 };
 
