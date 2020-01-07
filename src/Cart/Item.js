@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import styles from "./Item.module.scss";
 
 import { removeFromCart } from "../actions/cart";
+import Image from "../Products/Image";
 import formatPrice from "../Products/formatPrice";
 
 class Item extends React.Component {
@@ -17,7 +18,7 @@ class Item extends React.Component {
     return (
       <div className={styles.item}>
         <div className={styles.image}>
-          <img src={picture} alt={id} />
+          <Image src={picture} id={id} />
         </div>
         <div>
           <h3>Picture #{id}</h3>

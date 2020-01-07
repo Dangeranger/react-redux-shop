@@ -3,6 +3,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addToCart, removeFromCart } from "../actions/cart";
 
+import Image from "./Image";
 import styles from "./Show.module.scss";
 import formatPrice from "./formatPrice";
 
@@ -47,7 +48,7 @@ class Show extends React.Component {
       <div>
         <h2>Picture #{id}</h2>
         <div>
-          <img src={picture} alt={`#${id}`} />
+          <Image src={picture} id={id} />
         </div>
         {formatPrice(price)}
 

@@ -3,6 +3,8 @@ import styles from "./Product.module.scss";
 import formatPrice from "./formatPrice";
 import { Link } from "@reach/router";
 
+import Image from "./Image";
+
 class Product extends React.Component {
   render() {
     const { id, price, picture } = this.props;
@@ -10,7 +12,7 @@ class Product extends React.Component {
       <div className={styles.product}>
         <div>
           <Link to={`/products/${id}`}>
-            <img src={picture} alt={`#${id}`} />
+            <Image src={picture} id={id} />
           </Link>
         </div>
         <Link to={`/products/${id}`}>

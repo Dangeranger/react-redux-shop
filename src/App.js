@@ -10,6 +10,7 @@ import "./App.scss";
 import Products from "./Products";
 import Product from "./Products/Show";
 import Cart from "./Cart";
+import ProductForm from "./Admin/Products/Form";
 
 import CartMenuIcon from "./Cart/MenuIcon";
 
@@ -30,6 +31,8 @@ class App extends React.Component {
           <Product path="/products/:id" />
 
           <Cart path="/cart" />
+
+          <ProductForm path="/admin/products/new" />
         </Router>
       </Provider>
     );

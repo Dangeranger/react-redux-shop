@@ -1,0 +1,23 @@
+.form {
+  label {
+    margin-right: 1rem;
+  }
+
+  input {
+    font-size: 120%;
+  }
+}
+
+.submitButton {
+  padding: 0.5rem;
+  margin-top: 2vh;
+  font-size: 110%;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid rgb(1, 108, 170);
+  background: rgb(0, 119, 216);
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}

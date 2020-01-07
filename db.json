@@ -2,33 +2,43 @@
   "products": [
     {
       "id": 1,
-      "picture": "https://picsum.photos/id/1/500",
+      "picture": "1",
       "price": 10
     },
     {
       "id": 2,
-      "picture": "https://picsum.photos/id/10/500",
+      "picture": "2",
       "price": 20
     },
     {
       "id": 3,
-      "picture": "https://picsum.photos/id/100/500",
+      "picture": "42",
       "price": 30
     },
     {
       "id": 4,
-      "picture": "https://picsum.photos/id/1000/500",
+      "picture": "1000",
       "price": 40
     },
     {
       "id": 5,
-      "picture": "https://picsum.photos/id/99/500",
+      "picture": "99",
       "price": 50
     },
     {
       "id": 6,
-      "picture": "https://picsum.photos/id/990/500",
+      "picture": "990",
       "price": 60
+    },
+    {
+      "price": "123",
+      "picture": "123",
+      "id": 7
+    },
+    {
+      "price": "100",
+      "picture": "564",
+      "id": 8
     }
   ]
 }
